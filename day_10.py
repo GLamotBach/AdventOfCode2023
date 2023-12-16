@@ -97,4 +97,16 @@ print((len(path) - 1)/2)
 
 #   *   *   *   *   *   *   *   *   *   *   *   *   Day 10 - Puzzle 2   *   *   *   *   *   *   *   *   *   *   *   *
 
+map_2 = []
+for row in range(len(map)):
+    nodes_in_row = []
+    for column in range(len(map[row])):
+        checked_node = [row, column]
+        if checked_node in path:
+            nodes_in_row.append(column)
+    map_2.append(nodes_in_row)
+
+for n in map_2:
+    print(n)
+
 
